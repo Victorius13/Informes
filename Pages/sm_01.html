@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelos de Desarrollo de Sistemas</title>
+    <link rel="stylesheet" href="./../CSS/style_sm01.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <header class="membrete">
+            <h1>Modelos de Desarrollo de Sistemas</h1>
+            <h2>Perspectivas en Simulación y Aplicación</h2>
+        </header>
+
+        <nav class="nav-enlaces">
+            <a href="#continuo">Continuo</a>
+            <a href="#escalonado">Escalonado</a>
+            <a href="#v">Modelo V</a>
+            <a href="#repetitivo">Repetitivo</a>
+            <a href="#espiral">Espiral</a>
+        </nav>
+
+        <!-- Section Continuo -->
+        <section class="modelo-card" id="continuo">
+            <h3>Modelo Continuo</h3>
+            <p><strong>Descripción:</strong> El modelo de desarrollo continuo es una metodología que se centra en la automatización y eficiencia de los procesos de integración y entrega de software. Este enfoque busca minimizar los tiempos de desarrollo
+                y despliegue al mantener un flujo constante de trabajo a través de ciclos repetitivos.</p>
+            <ul>
+                <li>Actualización diaria de componentes: Los cambios se integran de forma constante para mantener versiones actualizadas.</li>
+                <li>Pruebas continuas y supervisadas: Automatización de pruebas para detectar y corregir errores rápidamente.</li>
+                <li>Reducción de errores críticos: Al abordar problemas de forma inmediata, se evita la acumulación de errores mayores.</li>
+            </ul>
+            <div>
+                <h4>Elementos Clave</h4>
+                <ul>
+                    <li><strong>Integración Continua (CI):</strong> Implica combinar frecuentemente los cambios realizados por los desarrolladores en un repositorio compartido. Este proceso permite la detección temprana de errores mediante pruebas automatizadas
+                        realizadas de forma continua. Ayuda a garantizar que el software sea siempre funcional y esté actualizado.</li>
+                    <li><strong>Entrega Continua (CD):</strong> Va más allá de la integración continua al automatizar el despliegue de cambios en un entorno de pruebas o producción. Esto asegura que las actualizaciones lleguen rápidamente a los usuarios,
+                        manteniendo alta calidad y consistencia.</li>
+                    <li><strong>Automatización:</strong> Todas las pruebas, compilaciones y despliegues están automatizados para acelerar el proceso y reducir el margen de error humano. Las herramientas como Jenkins, GitLab CI/CD o CircleCI suelen ser utilizadas
+                        para implementar estas prácticas.</li>
+                    <li><strong>Feedback Continuo:</strong> Promueve una retroalimentación constante entre los desarrolladores y otros equipos relacionados, como QA (aseguramiento de calidad) o usuarios finales. Esto permite realizar ajustes rápidos, mejorar
+                        el producto y abordar problemas a medida que surgen.</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Ventajas</h4>
+                <ul>
+                    <li><strong>Rapidez:</strong> Las nuevas funciones o correcciones llegan al mercado en cuestión de horas o días, no meses.</li>
+                    <li><strong>Calidad Mejorada:</strong> Las pruebas continuas aseguran un producto más robusto.</li>
+                    <li><strong>Flexibilidad:</strong> Permite adaptarse rápidamente a cambios en los requisitos o el entorno.</li>
+                </ul>
+            </div>
+            <div class="ejemplo">
+                <strong>Ejemplo:</strong> Implementaciones en tiempo real como aplicaciones de transmisión de video (e.g., Netflix), donde la funcionalidad y el contenido cambian constantemente sin interrumpir la experiencia del usuario.
+            </div>
+        </section>
+
+        <!-- Section Escalonado -->
+        <section class="modelo-card" id="escalonado">
+            <h3>2. Modelo Escalonado (Cascada)</h3>
+            <p><strong>Descripción:</strong> Este modelo sigue una estructura rígida y secuencial, ideal para proyectos donde los requisitos están completamente definidos desde el inicio. Cada etapa debe completarse antes de avanzar a la siguiente, lo que
+                asegura claridad en el proceso pero limita la flexibilidad.</p>
+            <div>
+                <h4>Fases del Modelo</h4>
+                <ul>
+                    <li><strong>Requisitos:</strong> Se recopila toda la información necesaria para determinar lo que el sistema debe hacer, documentando todos los detalles en esta fase inicial.</li>
+                    <li><strong>Diseño del Sistema:</strong> Se crea la arquitectura y el diseño del sistema basándose en los requisitos definidos.</li>
+                    <li><strong>Implementación (Codificación):</strong> Los programadores desarrollan el software según el diseño establecido.</li>
+                    <li><strong>Pruebas:</strong> Se realiza una serie de pruebas para verificar que el sistema funciona como se esperaba.</li>
+                    <li><strong>Despliegue:</strong> El sistema se entrega al cliente o al entorno de producción.</li>
+                    <li><strong>Mantenimiento:</strong> Se corrigen errores detectados después de la implementación y se realizan posibles actualizaciones o mejoras.</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Características Clave</h4>
+                <ul>
+                    <li><strong>Secuencia Lineal:</strong> Las fases se llevan a cabo en un orden estricto, sin posibilidad de retroceder a una etapa anterior.</li>
+                    <li><strong>Documentación Extensiva:</strong> Cada etapa se documenta de manera rigurosa, lo que asegura claridad en los requisitos, diseño y resultados.</li>
+                    <li><strong>Requisitos Estables:</strong> Es adecuado para proyectos en los que los requisitos se conocen completamente desde el inicio y es poco probable que cambien durante el desarrollo.</li>
+                    <li><strong>Menor Flexibilidad:</strong> Debido a la rigidez del proceso, realizar ajustes durante el desarrollo puede ser complicado.</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Ventajas</h4>
+                <ul>
+                    <li><strong>Estructura Claramente Definida:</strong> Cada fase tiene un inicio y un final claro, lo que facilita la gestión del proyecto.</li>
+                    <li><strong>Predictibilidad:</strong> Ideal para proyectos con objetivos y requisitos bien establecidos, donde el progreso puede ser monitoreado con precisión.</li>
+                    <li><strong>Control Rigurosamente Documentado:</strong> La extensa documentación asegura que los cambios y decisiones sean fáciles de rastrear.</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Desventajas</h4>
+                <ul>
+                    <li><strong>Rigidez:</strong> No permite iteraciones ni ajustes en fases anteriores, lo que puede ser problemático si surgen nuevos requisitos.</li>
+                    <li><strong>Largos Tiempos de Entrega:</strong> Los usuarios deben esperar hasta el final del proceso para ver un producto funcional.</li>
+                    <li><strong>Limitado a Requisitos Fijos:</strong> No se adapta bien a proyectos dinámicos o en entornos de rápida evolución.</li>
+                </ul>
+            </div>
+            <div class="ejemplo">
+                <strong>Ejemplo:</strong> Software para cohetes espaciales (e.g., Falcon 9 de SpaceX), donde la precisión y la planificación meticulosa son esenciales debido a la alta criticidad.
+            </div>
+        </section>
+
+
+        <!-- Section en V -->
+        <section class="modelo-card" id="v">
+            <h3>3. Modelo en V</h3>
+            <p><strong>Descripción:</strong> Este modelo se centra en la verificación y validación simultánea, asegurando que cada fase del desarrollo esté respaldada por su respectiva fase de pruebas. Esto garantiza un alto nivel de calidad y confiabilidad,
+                especialmente en sistemas críticos.</p>
+            <div>
+                <h4>Fases del Modelo</h4>
+                <ul>
+                    <li><strong>Recolección de Requisitos:</strong> Comprensión y documentación de los requisitos del cliente.</li>
+                    <li><strong>Especificación del Sistema:</strong> Diseñar cómo debe funcionar el sistema a alto nivel.</li>
+                    <li><strong>Diseño Detallado:</strong> Desglose del sistema en componentes más pequeños y específicos.</li>
+                    <li><strong>Implementación (Codificación):</strong> Desarrollo del sistema basado en los diseños previos.</li>
+                    <li><strong>Pruebas de Unidad:</strong> Validan los componentes individuales en la etapa de codificación.</li>
+                    <li><strong>Pruebas de Integración:</strong> Aseguran que los componentes trabajan juntos correctamente.</li>
+                    <li><strong>Pruebas del Sistema:</strong> Verifican que el sistema completo cumple con los requisitos funcionales.</li>
+                    <li><strong>Pruebas de Aceptación:</strong> Confirman que el sistema satisface las expectativas del usuario final.</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Características Clave</h4>
+                <ul>
+                    <li><strong>Enfoque en Verificación y Validación:</strong> Asegura que el producto cumple con los requisitos y necesidades del cliente.</li>
+                    <li><strong>Desarrollo y Pruebas Paralelas:</strong> Cada fase de desarrollo tiene un par de pruebas asociadas, planificadas de manera anticipada.</li>
+                    <li><strong>Rigor y Formalidad:</strong> Ideal para entornos donde la precisión y la calidad son esenciales.</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Ventajas</h4>
+                <ul>
+                    <li><strong>Alta Calidad y Confiabilidad:</strong> El enfoque estructurado en pruebas garantiza un producto robusto.</li>
+                    <li><strong>Detecta Problemas Tempranamente:</strong> Las pruebas planificadas desde el inicio permiten identificar errores en etapas tempranas.</li>
+                    <li><strong>Documentación Extensa:</strong> Proporciona una base sólida para futuros desarrollos o mantenimiento.</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Desventajas</h4>
+                <ul>
+                    <li><strong>Rigidez:</strong> No permite cambios fáciles una vez que el desarrollo ha comenzado.</li>
+                    <li><strong>Mayor Costo y Tiempo Inicial:</strong> Las fases iniciales requieren mayor planificación y recursos.</li>
+                    <li><strong>No Adaptable a Cambios Dinámicos:</strong> No es adecuado para proyectos donde los requisitos evolucionan constantemente.</li>
+                </ul>
+            </div>
+            <div class="ejemplo">
+                <strong>Ejemplo:</strong> Equipos médicos como resonadores magnéticos, que requieren precisión absoluta para garantizar la seguridad del paciente. Este modelo también se utiliza en sistemas aeronáuticos y militares debido a su enfoque
+                en calidad y confiabilidad.
+            </div>
+        </section>
+
+
+        <!-- Section Repetitivo -->
+        <section class="modelo-card" id="repetitivo">
+            <h3>4. Modelo Repetitivo (Iterativo)</h3>
+            <p><strong>Descripción:</strong> Este modelo fomenta el desarrollo en ciclos iterativos, lo que permite realizar entregas funcionales en cada iteración. Es ideal para proyectos donde los requisitos son dinámicos y propensos a cambios frecuentes.</p>
+            <div>
+                <h4>Características Clave</h4>
+                <ul>
+                    <li><strong>Ciclos Iterativos:</strong> El desarrollo se realiza en pequeños segmentos con objetivos específicos y entregables funcionales.</li>
+                    <li><strong>Entregas Incrementales:</strong> Las versiones entregadas acumulan funcionalidad progresivamente, brindando valor constante al cliente.</li>
+                    <li><strong>Flexibilidad:</strong> Los cambios en los requisitos pueden incorporarse en futuras iteraciones.</li>
+                    <li><strong>Retroalimentación Constante:</strong> Interacción continua con los usuarios para validar y ajustar el producto después de cada ciclo.</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Fases del Modelo</h4>
+                <ul>
+                    <li><strong>Planificación:</strong> Definición de los objetivos y funcionalidades a desarrollar en la iteración actual.</li>
+                    <li><strong>Diseño Inicial:</strong> Creación de diseños básicos necesarios para cumplir con los objetivos.</li>
+                    <li><strong>Desarrollo y Pruebas:</strong> Implementación y validación del producto mediante pruebas específicas.</li>
+                    <li><strong>Evaluación:</strong> Revisión de los entregables y retroalimentación del cliente para preparar la siguiente iteración.</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Ventajas</h4>
+                <ul>
+                    <li><strong>Adaptabilidad:</strong> Permite incorporar cambios de requisitos durante el proyecto.</li>
+                    <li><strong>Rapidez en Entregas Funcionales:</strong> Se priorizan las funcionalidades clave para entregarlas rápidamente.</li>
+                    <li><strong>Mejora Continua:</strong> Cada iteración permite optimizar el producto con base en retroalimentación real.</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Desventajas</h4>
+                <ul>
+                    <li><strong>Complejidad en Gestión:</strong> Puede ser difícil coordinar y gestionar múltiples ciclos y sus dependencias.</li>
+                    <li><strong>Riesgo de Desviaciones:</strong> Cambios constantes en los requisitos pueden desviar el proyecto de los objetivos originales.</li>
+                    <li><strong>Mayor Costo y Tiempo:</strong> La flexibilidad puede resultar en más revisiones, incrementando recursos necesarios.</li>
+                </ul>
+            </div>
+            <div class="ejemplo">
+                <strong>Ejemplo:</strong> Actualizaciones de videojuegos como Fortnite, donde regularmente se añaden eventos y características nuevas para mantener el interés de los usuarios. Este modelo también es común en aplicaciones SaaS que requieren
+                evolucionar según las necesidades del mercado.
+            </div>
+        </section>
+
+
+        <!-- Section Espiral -->
+        <section class="modelo-card" id="espiral">
+            <h3>5. Modelo en Espiral</h3>
+            <p><strong>Descripción:</strong> Este modelo combina las fortalezas de la iteración con un enfoque en la gestión de riesgos. Se desarrolla en ciclos, donde cada iteración se revisa y planifica nuevamente, lo que permite identificar y mitigar
+                riesgos de manera proactiva. Es ideal para proyectos complejos que requieren un control exhaustivo durante todo el ciclo de desarrollo.</p>
+            <div>
+                <h4>Fases del Modelo</h4>
+                <ul>
+                    <li><strong>Planificación:</strong> Se definen objetivos, recursos necesarios y cronogramas para cada iteración.</li>
+                    <li><strong>Análisis de Riesgos:</strong> Identificación y evaluación de riesgos potenciales, además de estrategias de mitigación específicas.</li>
+                    <li><strong>Desarrollo e Implementación:</strong> Creación o mejora del producto, incluyendo el desarrollo de características específicas planeadas para el ciclo.</li>
+                    <li><strong>Evaluación:</strong> Retroalimentación del cliente y evaluación del producto para preparar el siguiente ciclo.</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Características Clave</h4>
+                <ul>
+                    <li><strong>Gestión de Riesgos:</strong> La evaluación constante de riesgos permite resolver problemas antes de que impacten negativamente el proyecto.</li>
+                    <li><strong>Desarrollo Iterativo:</strong> Permite la entrega incremental del producto, mejorando continuamente en cada ciclo.</li>
+                    <li><strong>Flexibilidad:</strong> Se adapta fácilmente a cambios en los requisitos o objetivos del cliente.</li>
+                    <li><strong>Ciclos Estructurados:</strong> Cada iteración sigue un proceso bien definido, reduciendo incertidumbres.</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Ventajas</h4>
+                <ul>
+                    <li><strong>Gestión de Proyectos Complejos:</strong> Ideal para proyectos de gran escala con muchos riesgos e incertidumbres.</li>
+                    <li><strong>Adaptabilidad:</strong> Cambios en los requisitos pueden incorporarse a lo largo del desarrollo.</li>
+                    <li><strong>Control de Calidad:</strong> Cada ciclo asegura que el producto mejora progresivamente con retroalimentación constante.</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Desventajas</h4>
+                <ul>
+                    <li><strong>Alta Complejidad:</strong> Requiere experiencia avanzada en gestión de proyectos y análisis de riesgos.</li>
+                    <li><strong>Mayor Costo y Tiempo Inicial:</strong> Las etapas de planificación y mitigación de riesgos pueden ser costosas y prolongadas.</li>
+                    <li><strong>No Ideal para Proyectos Pequeños:</strong> Puede ser excesivo para desarrollos con pocas variables o de baja criticidad.</li>
+                </ul>
+            </div>
+            <div class="ejemplo">
+                <strong>Ejemplo:</strong> Sistemas de defensa militar y drones, que requieren un análisis exhaustivo en cada ciclo para garantizar funcionalidad, seguridad y confiabilidad. También es aplicable en software financiero o proyectos aeroespaciales
+                como sistemas de navegación.
+            </div>
+        </section>
+
+
+
+        <h2 style="color: var(--color-primario); margin: 30px 0 15px 0;">Comparativa de Modelos</h2>
+        <table class="comparativa">
+            <tr>
+                <th>Modelo</th>
+                <th>Ventajas</th>
+                <th>Caso de Uso</th>
+            </tr>
+            <tr>
+                <td>Continuo</td>
+                <td>Actualizaciones rápidas</td>
+                <td>Aplicaciones Web/SaaS</td>
+            </tr>
+            <tr>
+                <td>Escalonado</td>
+                <td>Predictibilidad</td>
+                <td>Proyectos gubernamentales</td>
+            </tr>
+            <tr>
+                <td>En V</td>
+                <td>Alta calidad</td>
+                <td>Sistemas médicos</td>
+            </tr>
+            <tr>
+                <td>Repetitivo</td>
+                <td>Adaptabilidad</td>
+                <td>Startups tecnológicas</td>
+            </tr>
+            <tr>
+                <td>Espiral</td>
+                <td>Gestión de riesgos</td>
+                <td>Proyectos militares</td>
+            </tr>
+        </table>
+    </div>
+    <div class="floating-button">
+        <a href="./../index.html" target="_blank">Volver a Inicio</a>
+    </div>
+    <footer>
+        <p>&copy; 2025 UNEFA - Simulacion y Modelos</p>
+    </footer>
+</body>
+
+</html>

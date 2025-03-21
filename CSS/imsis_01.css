@@ -1,0 +1,174 @@
+:root {
+    --color-primario: #1A5276;
+    --color-secundario: #566573;
+    --color-accento: #2980B9;
+    --color-fondo: #F8F9FA;
+    --color-texto: #17202A;
+    --color-tabla-header: #154360;
+    --color-tabla-filas: #D6EAF8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Añade espacio entre las secciones */
+}
+
+header,
+nav,
+main,
+footer {
+    padding: 20px;
+    background: #FFFFFF;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    color: var(--color-primario);
+    font-size: 2.5em;
+}
+
+header h2 {
+    color: var(--color-secundario);
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 15px;
+    /* Añade espacio entre los elementos */
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    background: var(--color-accento);
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background 0.3s ease;
+}
+
+nav a:hover {
+    background: var(--color-primario);
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #F9F9F9;
+    /* Fondo más claro para destacar las secciones */
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: var(--color-primario);
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: var(--color-accento);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+table th,
+table td {
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background: var(--color-tabla-header);
+    color: white;
+}
+
+table td {
+    background: var(--color-tabla-filas);
+}
+
+
+/* Estilo del botón flotante */
+
+.floating-button {
+    position: fixed;
+    /* Fija el botón en la pantalla */
+    bottom: 20px;
+    /* Separación desde la parte inferior */
+    right: 20px;
+    /* Separación desde la parte derecha */
+    background-color: #2980B9;
+    /* Color de fondo del botón */
+    border-radius: 50px;
+    /* Botón redondeado */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* Sombra */
+    overflow: hidden;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.floating-button a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    /* Color del texto */
+    font-size: 16px;
+    padding: 12px 20px;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.floating-button:hover {
+    transform: scale(1.1);
+    /* Efecto de zoom */
+    background-color: #1A5276;
+    /* Color al pasar el cursor */
+}
+
+.floating-button a:hover {
+    color: #d6eaf8;
+    /* Cambio de color del texto al pasar el cursor */
+}
+
+footer {
+    text-align: center;
+    color: var(--color-secundario);
+    font-size: 0.9em;
+}

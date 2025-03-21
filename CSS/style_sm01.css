@@ -1,0 +1,195 @@
+:root {
+    --color-primario: #1b4f72;
+    /* Azul oscuro tecnológico */
+    --color-secundario: #21618c;
+    /* Azul medio */
+    --color-accento: #28a745;
+    /* Verde simulación */
+    --color-texto: #333333;
+    /* Texto neutro */
+    --color-fondo: #eaf2f8;
+    /* Fondo claro */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.membrete {
+    border-bottom: 4px solid var(--color-primario);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.membrete h1 {
+    color: var(--color-primario);
+    font-size: 2.8em;
+    margin-bottom: 0.3em;
+    font-weight: bold;
+}
+
+.membrete h2 {
+    color: var(--color-secundario);
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.modelo-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.modelo-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modelo-card h3 {
+    color: var(--color-accento);
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+
+.modelo-card p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.modelo-card ul {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+.modelo-card li {
+    margin-bottom: 10px;
+}
+
+.ejemplo {
+    background: #d4edda;
+    padding: 15px;
+    border-left: 4px solid var(--color-accento);
+    margin: 20px 0;
+    border-radius: 6px;
+}
+
+.comparativa {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+.comparativa th,
+.comparativa td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.comparativa th {
+    background-color: var(--color-primario);
+    color: white;
+    font-weight: 600;
+}
+
+.nav-enlaces {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.nav-enlaces a {
+    text-decoration: none;
+    color: var(--color-accento);
+    padding: 12px 25px;
+    border: 2px solid var(--color-accento);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.nav-enlaces a:hover {
+    background-color: var(--color-accento);
+    color: white;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        padding: 15px;
+    }
+    .membrete h1 {
+        font-size: 2.4em;
+    }
+    .nav-enlaces {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+/* Estilo del botón flotante */
+
+.floating-button {
+    position: fixed;
+    /* Fija el botón en la pantalla */
+    bottom: 20px;
+    /* Separación desde la parte inferior */
+    right: 20px;
+    /* Separación desde la parte derecha */
+    background-color: #2980B9;
+    /* Color de fondo del botón */
+    border-radius: 50px;
+    /* Botón redondeado */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* Sombra */
+    overflow: hidden;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.floating-button a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    /* Color del texto */
+    font-size: 16px;
+    padding: 12px 20px;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.floating-button:hover {
+    transform: scale(1.1);
+    /* Efecto de zoom */
+    background-color: #1A5276;
+    /* Color al pasar el cursor */
+}
+
+.floating-button a:hover {
+    color: #d6eaf8;
+    /* Cambio de color del texto al pasar el cursor */
+}
+
+footer {
+    text-align: center;
+}
